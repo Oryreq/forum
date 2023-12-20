@@ -1,0 +1,45 @@
+
+html {
+	font-size:62.5%;
+}
+* {
+	margin: 0;
+	padding: 0;
+}
+ul, li {
+	list-style: none;
+}
+input {
+	border: none;
+}
+body {
+  width: 192rem;
+}.main-2-zs6 {
+  box-sizing: border-box;
+  padding: 61.8rem 78.4rem 5.8rem 78.6rem;
+  width: 100%;
+  height: 79.4rem;
+  overflow: hidden;
+  position: relative;
+  border-bottom: solid 0.1rem #3d3c3c;
+  background-color: #303030;
+}
+.main-2-zs6 .button-J76 {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3.6rem;
+  font-weight: 500;
+  line-height: 1.2175;
+  letter-spacing: -0.054rem;
+  color: #ffffff;
+  font-family: Montserrat, 'Source Sans Pro';
+  white-space: nowrap;
+  border: solid 0.1rem #353535;
+  box-sizing: border-box;
+  box-shadow: 0 0.4rem 3rem rgba(0, 0, 0, 0.1000000015);
+  background-color: #228e5d;
+  border-radius: 4.5rem;
+}
