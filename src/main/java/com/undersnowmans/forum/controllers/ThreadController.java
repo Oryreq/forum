@@ -20,15 +20,11 @@ public class ThreadController {
 
     @GetMapping
     public String getThreadsPage(Model model) {
-        return "threads";
-    }
-
-    @GetMapping("/all")
-    public List<Thread> getAllThreads() {
         var threads = List.of(new Thread(1L, "Sex", 1L, "23.02.2022"),
                                           new Thread(2L, "IT", 2L, "24.08.2005"));
 
-        return threads;
+        model.addAttribute("threads", threads);
+        return "threads";
     }
 
 
