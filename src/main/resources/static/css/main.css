@@ -2,9 +2,97 @@ body {
   margin: 0px;
   background-color: #303030;
   font-family: Comfortaa, 'Source Sans Pro';
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: 70px 1fr;
+}
+
+wrapper {
+  display: flex;
+  justify-content: space-around;
+  align-content: center;
+  height: 100%;
+  flex-grow: 3;
+  align-items: center
+}
+
+form {
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+  background-color: #272727;
+  border-radius: 30px;
+  border: 2px solid #272727;
+  align-items: center;
+
+  font-size: 1.2em;
+}
+
+form a {
+  font-size: 0.8em;
+}
+
+input {
+  width: 100%;
+  padding: 6px 10px;
+  font-family: Comfortaa, 'Source Sans Pro';
+  font-size: 1.1em;
+  box-sizing: border-box;
+  background-color: #3E3C3C;
+  color: #FFFFFF;
+  margin-bottom: 10px;
+}
+
+.button {
+  padding: 6px 10px;
+  font-family: Comfortaa, 'Source Sans Pro';
+  font-size: 1.1em;
+  box-sizing: border-box;
+  background-color: #228E5D;
+  color: #ffffff;
+
+  border-radius: 10px;
+  border: 2px solid #228E5D;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.hello-message {
+  display: flex;
+  flex-direction: column;
+}
+
+button {
+  padding: 6px 10px;
+  font-family: Comfortaa, 'Source Sans Pro';
+  font-size: 1.1em;
+  box-sizing: border-box;
+  background-color: #228E5D;
+  color: #ffffff;
+
+  border-radius: 10px;
+  border: 2px solid #228E5D;
+  margin-bottom: 10px;
 }
 
 .no-decoration-link {
   color: #ffffff;
   text-decoration: none;
+}
+
+h2 {
+  color: #ffffff;
+}
+
+textarea {
+  width: 100%;
+  font-family: Comfortaa, 'Source Sans Pro';
+  font-size: 1em;
+  box-sizing: border-box;
+  background-color: #3E3C3C;
+  color: #ffffff;
+  resize: none;
+  padding: 10px;
+  margin-bottom: 10px
 }

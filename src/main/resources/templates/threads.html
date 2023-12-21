@@ -6,10 +6,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
     <title>Udsu.h</title>
+    <link rel="stylesheet" href="/static/css/threads.css">
 </head>
 <body>
 <header th:insert="~{blocks/header :: header}"></header>
 
-TO-DO: MAKE THREADS VISIBLE
+<wrapper>
+    <div class="thread-list">
+        <a th:each="thread : ${threads}"  th:href="@{'/thread/' + ${thread.id}}" class="thread-item no-decoration-link">
+            <div class="thread-top">
+                <div th:text="${thread.title}" class="thread-title"></div>
+                <div class="thread-author">TheCreeeZy detka</div>
+            </div>
+            <div class="thread-bot">
+                <div class="thread-message">Сообщение внутри треда</div>
+                <div th:text="${thread.createdTime}" class="thread-created-date"></div>
+            </div>
+        </a>
+    </div>
+</wrapper>
 </body>
 </html>
