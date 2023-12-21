@@ -24,7 +24,7 @@ public class ThreadController {
         var threads = List.of(new Thread(1L, "Sex", 1L, "23.02.2022"),
                 new Thread(2L, "IT", 2L, "24.08.2005"));
 
-        // TO-DO: Отправлять еще и данные об авторе треда
+        // TO-DO: Отправлять еще и данные об авторе треда (засунуть их в threads, можно через добавление связи с пользователем, как будто бы даже логичнее на самом деле)
         model.addAttribute("threads", threads);
         return "threads";
     }
@@ -32,6 +32,10 @@ public class ThreadController {
     @GetMapping("/{id}")
     public String getMessagesPage(Model model, @PathVariable(value= "id" )Long id) {
         Optional<Thread> threadOptional = threadRepository.findById(id);
+
+        /**
+         * Требует thread
+         */
 
         if (threadOptional.isEmpty()) {
             ArrayList<Message> messages = new ArrayList<>();

@@ -23,6 +23,10 @@
                 <div class="thread-message">Попробуй говна поесть дурачок</div>
             </div>
         </a>
+        <form th:action="@{'/message/create/' + ${thread.id}}" method="post" class="thread-bottom">
+            <input type="text" name ="message" placeholder="Сообщение" class="thread-input">
+            <button type="submit">ok</button>
+        </form>
     </div>
 </wrapper>
 </body>
