@@ -8,14 +8,19 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
-@RequestMapping("/")
+@RequestMapping("/auth")
 public class AuthController {
 
     @Autowired
     UserRepository userRepository;
 
-    @GetMapping
+    @GetMapping("/login")
     public String getAuthPage(Model model) {
-        return "auth/auth";
+        return "login";
+    }
+
+    @GetMapping("/register")
+    public String getRegisterPage(Model model) {
+        return "register";
     }
 }

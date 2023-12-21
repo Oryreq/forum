@@ -8,14 +8,13 @@ import org.springframework.web.bind.annotation.RestController;
 import java.security.Principal;
 
 @Controller
-@RequestMapping("/authorized")
 public class MainController {
 
-    @GetMapping("/user")
+    @GetMapping("/")
     public String userAccess(Principal principal) {
         if (principal == null) {
             return null;
         }
-        return principal.getName();
+        return "index";
     }
 }

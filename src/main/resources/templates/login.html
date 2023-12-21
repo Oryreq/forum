@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <title>Авторизация</title>
+</head>
+<body>
+<header th:insert="~{blocks/header :: header}"></header>
+
+<wrapper>
+    <form action="/auth/login" method="post">
+        <input type="text" name ="username" placeholder="Логин" class="auth-input">
+        <input type="password" name ="password" placeholder="Пароль" class="auth-input">
+        <button type="submit" class="auth-button">Войти</button>
+        <a href="/auth/register" class="no-decoration-link">У меня нет аккаунта</a>
+    </form>
+</wrapper>
+
+</body>
+</html>
