@@ -9,18 +9,14 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
-@RequestMapping("/")
-public class AuthController {
+@RequestMapping("/login")
+public class LoginController {
 
     @Autowired
     UserRepository userRepository;
 
     @GetMapping
-    public String getAuthPage(Model model) {
-
-        var user = new User(1L, "null", "sd", "sdsd");
-        model.addAttribute("user", user);
-
-        return "auth/auth";
+    public String getLoginPage(Model model) {
+        return "login";
     }
 }
