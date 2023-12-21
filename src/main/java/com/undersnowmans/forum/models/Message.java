@@ -1,17 +1,26 @@
 package com.undersnowmans.forum.models;
 
 import jakarta.persistence.*;
-import lombok.Data;
+import lombok.*;
 
 @Entity
-@Table(name = "messages")
-@Data
+@AllArgsConstructor
+@NoArgsConstructor
+@Setter
+@Getter
 public class Message {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column
+    @OneToOne(targetEntity = User.class, cascade = CascadeType.ALL)
+    @JoinColumn(name = "user_id")
+    private User user;
+
+    @ManyToOne(targetEntity = Thread.class, cascade = CascadeType.ALL)
+    @JoinColumn(name = "thread_id")
+    private Thread thread;
+
     private String text;
 }

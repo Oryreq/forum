@@ -1,17 +1,23 @@
 package com.undersnowmans.forum.models;
 
 import jakarta.persistence.*;
-import lombok.Data;
+import lombok.*;
 
 @Entity
-@Table(name = "threads")
-@Data
+@AllArgsConstructor
+@NoArgsConstructor
+@Setter
+@Getter
 public class Thread {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column
-    private Long threadThemeId;
+    private String title;
+
+    private Long firstMessageId;
+
+    private String createdTime;
+
 }
