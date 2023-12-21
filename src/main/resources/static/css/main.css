@@ -1,0 +1,10 @@
+body {
+  margin: 0px;
+  background-color: #303030;
+  font-family: Comfortaa, 'Source Sans Pro';
+}
+
+.no-decoration-link {
+  color: #ffffff;
+  text-decoration: none;
+}
