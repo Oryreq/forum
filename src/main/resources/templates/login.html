@@ -11,11 +11,11 @@
 <header th:insert="~{blocks/header :: header}"></header>
 
 <wrapper>
-    <form action="/auth/login" method="post">
+    <form action="/login/send" method="post">
         <input type="text" name ="username" placeholder="Логин" class="auth-input">
         <input type="password" name ="password" placeholder="Пароль" class="auth-input">
         <button type="submit" class="auth-button">Войти</button>
-        <a href="/auth/register" class="no-decoration-link">У меня нет аккаунта</a>
+        <a href="/register" class="no-decoration-link">У меня нет аккаунта</a>
     </form>
 </wrapper>
 </body>

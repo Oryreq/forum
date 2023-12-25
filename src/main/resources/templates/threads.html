@@ -13,14 +13,14 @@
 
 <wrapper>
     <div class="thread-list">
-        <a th:each="thread : ${threads}"  th:href="@{'/thread/' + ${thread.id}}" class="thread-item no-decoration-link">
+        <a th:each="thread : ${threads}"  th:href="@{'/threads/' + ${thread.thread.id}}" class="thread-item no-decoration-link">
             <div class="thread-top">
-                <div th:text="${thread.title}" class="thread-title"></div>
-                <div class="thread-author">TheCreeeZy detka</div>
+                <div th:text="${thread.thread.title}" class="thread-title"></div>
+                <div class="thread-author"></div>
             </div>
             <div class="thread-bot">
-                <div class="thread-message">Сообщение внутри треда</div>
-                <div th:text="${thread.createdTime}" class="thread-created-date"></div>
+                <div class="thread-message" th:text="${thread.firstMessage.text}"></div>
+                <div th:text="${thread.thread.createdTime}" class="thread-created-date"></div>
             </div>
         </a>
     </div>

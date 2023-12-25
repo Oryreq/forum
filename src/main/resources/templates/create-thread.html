@@ -11,7 +11,7 @@
 <header th:insert="~{blocks/header :: header}"></header>
 
 <wrapper>
-    <form action="/thread/create" method="post">
+    <form action="/threads/create" method="post">
         <input type="text" name ="title" placeholder="Заголовок" class="thread-input">
         <textarea name ="message" maxlength="300" rows="6" placeholder="Сообщение"></textarea>
         <button type="submit" class="auth-button">Создать тред</button>

@@ -13,17 +13,17 @@
 
 <wrapper>
     <div class="thread-list">
-        <div class="thread-author">Thread Theme</div>
-        <a th:each="thread : ${threads}"  th:href="@{'/threads/' + ${thread.id}}" class="thread-item no-decoration-link">
+        <div class="thread-author" th:text="${threadTitle}">Thread Theme</div>
+        <a th:each="message : ${messages}"  th:href="@{'/threads/' + ${id}}" class="thread-item no-decoration-link">
             <div class="thread-top">
-                <div class="thread-author">TheCreeeZy detka</div>
-                <div th:text="${thread.createdTime}" class="thread-created-date"></div>
+                <div class="thread-author"></div>
+                <div th:text="${createdAt}" class="thread-created-date"></div>
             </div>
             <div class="thread-bot">
-                <div class="thread-message">Попробуй говна поесть дурачок</div>
+                <div class="thread-message" th:text="${message.text}"></div>
             </div>
         </a>
-        <form th:action="@{'/message/create/' + ${thread.id}}" method="post" class="thread-bottom">
+        <form th:action="@{'/message/create/' + ${id}}" method="post" class="thread-bottom">
             <input type="text" name ="message" placeholder="Сообщение" class="thread-input">
             <button type="submit">ok</button>
         </form>

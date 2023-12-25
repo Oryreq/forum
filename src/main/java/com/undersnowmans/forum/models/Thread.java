@@ -30,8 +30,7 @@ public class Thread {
 
     private String createdTime;
 
-    @OneToMany(targetEntity = Message.class, cascade = CascadeType.ALL)
-    @JoinColumn(name = "thread_id")
+    @OneToMany(mappedBy = "thread", cascade = CascadeType.ALL)
     private List<Message> messages;
 
 }
